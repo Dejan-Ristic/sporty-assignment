@@ -1,0 +1,42 @@
+:root
+  --white-color: #ebebeb
+  --black-color: #141414
+  --font-size-p: 16px
+
+*
+  font-size: var(--font-size-p)
+  font-weight: normal
+  font-family: sans-serif
+  color: var(--black-color)
+  box-sizing: border-box
+  flex-basis: auto
+  margin: 0
+  padding: 0
+  border: none
+  line-height: normal
+  font-style: normal
+  text-decoration: none
+  list-style-type: none
+  outline: 0 none transparent
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100% 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  &:focus
+    outline: 0 none transparent
+  &::-moz-focus-inner
+    border: 0
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    appearance: none
+    margin: 0
+  &[type='number']
+    -moz-appearance: textfield
+    appearance: textfield
+  &:is(select)
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
