@@ -1,3 +1,4 @@
+import "./i18n";
 import {
   Route,
   BrowserRouter as Router,
@@ -5,15 +6,14 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Suspense } from "react";
-import "./i18n";
-import { HomePage } from "./router/routes";
+import { LeaguesPage } from "./router/routes";
 
 function App() {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LeaguesPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

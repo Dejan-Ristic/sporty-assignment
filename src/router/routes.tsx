@@ -1,4 +1,6 @@
 import React from "react";
-const HomePage = React.lazy(() => import("../pages/HomePage/HomePage"));
+const LeaguesPage = React.lazy(
+  () => import("../pages/LeaguesPage/LeaguesPage")
+);
 
-export { HomePage };
+export { LeaguesPage };
