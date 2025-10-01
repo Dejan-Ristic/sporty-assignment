@@ -4,6 +4,7 @@ import type {
   IApiResponse,
   IAllSeasonsResponse,
   ISeason,
+  ILeagueListFilter,
 } from "./leagues";
 
 export type {
@@ -12,4 +13,5 @@ export type {
   IApiResponse,
   IAllSeasonsResponse,
   ISeason,
+  ILeagueListFilter,
 };

@@ -15,9 +15,14 @@ export interface IApiResponse<T> {
 }
 
 export interface IAllLeaguesResponse {
-  leagues: ILeague[];
+  leagues: ILeague[] | null;
 }
 
 export interface IAllSeasonsResponse {
-  seasons: ISeason[];
+  seasons: ISeason[] | null;
+}
+
+export interface ILeagueListFilter {
+  nameSearch: string | undefined;
+  selectedSport: string | undefined;
 }
