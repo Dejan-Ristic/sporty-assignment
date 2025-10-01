@@ -17,8 +17,12 @@ const LeaguesFilter = observer(() => {
   }, [debouncedValue]);
 
   return (
-    <Flex gap={24} className={styles.leagueFilter}>
-      <Form.Item label={t("select_sport")} layout="vertical">
+    <Flex className={styles.leagueFilter}>
+      <Form.Item
+        label={t("select_sport")}
+        layout="vertical"
+        className={styles.formItem}
+      >
         <Select
           className={styles.filterField}
           options={leaguesStore.allSportsList}
@@ -29,7 +33,11 @@ const LeaguesFilter = observer(() => {
           }
         />
       </Form.Item>
-      <Form.Item label={t("search_league")} layout="vertical">
+      <Form.Item
+        label={t("search_league")}
+        layout="vertical"
+        className={styles.formItem}
+      >
         <Input
           className={styles.filterField}
           allowClear

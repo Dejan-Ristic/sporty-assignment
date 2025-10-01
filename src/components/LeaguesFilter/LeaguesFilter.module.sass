@@ -1,8 +1,12 @@
 .leagueFilter
+    flex-direction: var(--filter-dir)
+    gap: var(--offset-medium)
     :global
         .ant-form-item-label > label
-            font-size: 16px
+            font-size: var(--font-size-p)
+    .formItem
+        margin-bottom: var(--offset-small) !important
     .filterField
         width: 280px
         height: 40px
-        font-size: 16px !important
+        font-size: var(--font-size-p) !important
