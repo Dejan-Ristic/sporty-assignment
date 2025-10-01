@@ -1,3 +1,15 @@
-import type { ILeague, IAllLeaguesResponse, IApiResponse } from "./leagues";
+import type {
+  ILeague,
+  IAllLeaguesResponse,
+  IApiResponse,
+  IAllSeasonsResponse,
+  ISeason,
+} from "./leagues";
 
-export type { ILeague, IAllLeaguesResponse, IApiResponse };
+export type {
+  ILeague,
+  IAllLeaguesResponse,
+  IApiResponse,
+  IAllSeasonsResponse,
+  ISeason,
+};

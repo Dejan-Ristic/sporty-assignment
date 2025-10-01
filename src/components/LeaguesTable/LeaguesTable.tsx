@@ -11,10 +11,6 @@ const LeaguesTable = observer(() => {
     leaguesStore.getAllLeagues();
   }, []);
 
-  const getBadge = (id: string) => {
-    console.log(id);
-  };
-
   return (
     <Table<ILeague>
       dataSource={leaguesStore.leaguesToDisplay}
@@ -23,7 +19,7 @@ const LeaguesTable = observer(() => {
       rowKey={(record) => `row_${record.idLeague}`}
       className={styles.leaguesTable}
       onRow={(record) => ({
-        onClick: () => getBadge(record.idLeague),
+        onClick: () => leaguesStore.getAllSeasons(record.idLeague),
       })}
     ></Table>
   );
