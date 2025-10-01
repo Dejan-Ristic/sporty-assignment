@@ -17,7 +17,7 @@ const LeaguesTable = observer(() => {
 
   return (
     <Table<ILeague>
-      dataSource={leaguesStore.allLeagues}
+      dataSource={leaguesStore.leaguesToDisplay}
       columns={columns}
       pagination={false}
       rowKey={(record) => `row_${record.idLeague}`}
