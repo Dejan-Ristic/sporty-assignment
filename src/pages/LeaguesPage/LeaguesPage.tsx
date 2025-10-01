@@ -8,7 +8,7 @@ const LeaguesPage = () => {
   const { t } = useTranslation();
   return (
     <Flex className={clsx(styles.leaguesPage)} vertical>
-      <Header className={styles.section}>{t("welcome")}</Header>
+      <Header className={styles.section}>{t("title")}</Header>
       <Flex className={styles.section} justify="space-between">
         <LeaguesFilter />
         <Badge />
