@@ -5,6 +5,7 @@ import { leaguesStore } from "../../store";
 import { observer } from "mobx-react-lite";
 import { useEffect, useState } from "react";
 import { useDebounce } from "../../hooks";
+import { FilterFieldsEnum } from "../../interfaces";
 
 const LeaguesFilter = observer(() => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const LeaguesFilter = observer(() => {
   const debouncedValue = useDebounce(value, 400);
 
   useEffect(() => {
-    leaguesStore.setFilter("nameSearch", debouncedValue);
+    leaguesStore.setFilter(FilterFieldsEnum.NAME_SEARCH, debouncedValue);
   }, [debouncedValue]);
 
   return (
@@ -23,7 +24,9 @@ const LeaguesFilter = observer(() => {
           options={leaguesStore.allSportsList}
           allowClear
           showSearch
-          onChange={(val) => leaguesStore.setFilter("selectedSport", val)}
+          onChange={(val) =>
+            leaguesStore.setFilter(FilterFieldsEnum.SELECTED_SPORT, val)
+          }
         />
       </Form.Item>
       <Form.Item label={t("search_league")} layout="vertical">

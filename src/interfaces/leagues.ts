@@ -23,6 +23,11 @@ export interface IAllSeasonsResponse {
 }
 
 export interface ILeagueListFilter {
-  nameSearch: string | undefined;
-  selectedSport: string | undefined;
+  [FilterFieldsEnum.NAME_SEARCH]: string | undefined;
+  [FilterFieldsEnum.SELECTED_SPORT]: string | undefined;
+}
+
+export enum FilterFieldsEnum {
+  NAME_SEARCH = "nameSearch",
+  SELECTED_SPORT = "selectedSport",
 }

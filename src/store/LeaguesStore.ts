@@ -1,7 +1,12 @@
 import { makeAutoObservable } from "mobx";
 import to from "await-to-js";
 import { leaguesApiService } from "../services";
-import type { ILeague, ILeagueListFilter, ISeason } from "../interfaces";
+import type {
+  FilterFieldsEnum,
+  ILeague,
+  ILeagueListFilter,
+  ISeason,
+} from "../interfaces";
 
 class LeaguesStore {
   constructor() {
@@ -26,8 +31,8 @@ class LeaguesStore {
     this.allSeasons = res.data.seasons ?? [];
   };
 
-  setFilter = (prop: string, value: string) =>
-    (this.filter[prop as keyof ILeagueListFilter] = value);
+  setFilter = (prop: FilterFieldsEnum, value: string) =>
+    (this.filter[prop] = value);
 
   get leaguesToDisplay() {
     let leagues = this.allLeagues;

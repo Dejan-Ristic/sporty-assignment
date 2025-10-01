@@ -7,6 +7,8 @@ import type {
   ILeagueListFilter,
 } from "./leagues";
 
+import { FilterFieldsEnum } from "./leagues";
+
 export type {
   ILeague,
   IAllLeaguesResponse,
@@ -15,3 +17,5 @@ export type {
   ISeason,
   ILeagueListFilter,
 };
+
+export { FilterFieldsEnum };
