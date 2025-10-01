@@ -1,8 +1,7 @@
-import { Flex } from "antd";
 import styles from "./Badge.module.sass";
 
 const Badge = () => {
-  return <Flex className={styles.badge}>Badge</Flex>;
+  return <div className={styles.badge}></div>;
 };
 
 export default Badge;

@@ -4,15 +4,16 @@ import { leaguesStore } from "../../store";
 import { columns } from "./leaguesTable.config";
 import type { ILeague } from "../../interfaces";
 import { observer } from "mobx-react-lite";
+import styles from "./LeaguesTable.module.sass";
 
 const LeaguesTable = observer(() => {
   useEffect(() => {
     leaguesStore.getAllLeagues();
   }, []);
 
-  // const getBadge = (id: string) => {
-  //   console.log(id);
-  // };
+  const getBadge = (id: string) => {
+    console.log(id);
+  };
 
   return (
     <Table<ILeague>
@@ -20,10 +21,10 @@ const LeaguesTable = observer(() => {
       columns={columns}
       pagination={false}
       rowKey={(record) => `row_${record.idLeague}`}
-      // onRow={(record) => ({
-      //   onClick: () => getBadge(record.idLeague),
-      // })}
-      rowHoverable
+      className={styles.leaguesTable}
+      onRow={(record) => ({
+        onClick: () => getBadge(record.idLeague),
+      })}
     ></Table>
   );
 });

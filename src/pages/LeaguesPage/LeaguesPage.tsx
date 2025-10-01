@@ -7,14 +7,16 @@ import { Badge, Header, LeaguesFilter, LeaguesTable } from "../../components";
 const LeaguesPage = () => {
   const { t } = useTranslation();
   return (
-    <div className={clsx(styles.leaguesPage)}>
+    <Flex className={clsx(styles.leaguesPage)} vertical>
       <Header className={styles.section}>{t("welcome")}</Header>
       <Flex className={styles.section} justify="space-between">
         <LeaguesFilter />
         <Badge />
       </Flex>
-      <LeaguesTable />
-    </div>
+      <div className={styles.table}>
+        <LeaguesTable />
+      </div>
+    </Flex>
   );
 };
 
