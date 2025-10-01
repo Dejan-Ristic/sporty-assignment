@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 import to from "await-to-js";
 import { leaguesApiService } from "../services";
 import type {
@@ -22,17 +22,17 @@ class LeaguesStore {
   getAllLeagues = async () => {
     const [err, res] = await to(leaguesApiService.getAllLeagues());
     if (err) return;
-    this.allLeagues = res.data.leagues ?? [];
+    runInAction(() => (this.allLeagues = res.data.leagues ?? []));
   };
 
   getAllSeasons = async (id: string) => {
     const [err, res] = await to(leaguesApiService.getAllSeasons(id));
     if (err) return;
-    this.allSeasons = res.data.seasons ?? [];
+    runInAction(() => (this.allSeasons = res.data.seasons ?? []));
   };
 
   setFilter = (prop: FilterFieldsEnum, value: string) =>
-    (this.filter[prop] = value);
+    runInAction(() => (this.filter[prop] = value));
 
   get leaguesToDisplay() {
     let leagues = this.allLeagues;
