@@ -4,7 +4,13 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      welcome: "Willkommen",
+      loading: "Loading...",
+      title: "Leagues list",
+      select_sport: "Select sport",
+      search_league: "Search league",
+      league_name: "League name",
+      sport_name: "Sport",
+      league_alternate: "Alternate league",
     },
   },
 };
